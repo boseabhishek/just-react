@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# just-react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## setup
 
-## Available Scripts
+[instructions for following along locally using your preferred text editor
+](https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment)
 
-In the project directory, you can run:
+## What Is React?
 
-### `npm start`
+React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How it works?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```js
 
-### `npm test`
+// ShoppingList is a React component class, or React component type.
+//
+// We use `components` to tell React what we want to see on the screen.
+// When our data changes, React will efficiently update and re-render our components.
+//
+// `props` are "params" to `components`
+//
+// The `render` method returns a description of what you want to see on the screen
+// That description is called a `React element`
+class ShoppingList extends React.Component {
+  render() {
+    // You can put any JavaScript expressions within braces 
+    // inside JSX
+    return (
+      <div className="shopping-list">
+        <h1>Shopping List for {this.props.name}</h1>
+        <ul>
+          <li>Instagram</li>
+          <li>WhatsApp</li>
+          <li>Oculus</li>
+        </ul>
+      </div>
+    );
+  }
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+// Example usage: <ShoppingList name="Mark" />
 
-### `npm run build`
+```
+**All JSX code btw** :point_up_2:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement('div'). The example above is equivalent to:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+return React.createElement('div', {className: 'shopping-list'},
+  React.createElement('h1', /* ... h1 children ... */),
+  React.createElement('ul', /* ... ul children ... */)
+);
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+See [this](https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgBAxgNgQwM5IHIILYFMC8AiJACwHsAHUsAOwHMBaOMJAFzwD4AoKKYQgRlYDKJclWpQAMoyZQAZsQBOUAN6l5ZJADpKmLAF9gAej4cuwAK5wTXbg1YBJSswTV5mQ7c7XgtgOqEETEgAguTuYFamtgDyMBZmSGFWhhYchuAQrADc7EA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=react&prettier=false&targets=&version=7.12.12&externalPlugins=) link to find out how it works.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:coffee:    **Fact 1# JS and ReactJS**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+React.createElement('div'
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+is quite similar to what you do in JS DOM manipulation using 
+```js
+document.createElement('div');
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Bookmark (to be removed)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

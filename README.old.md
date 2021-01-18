@@ -1,3 +1,0 @@
-# just-react
-
-## setup
