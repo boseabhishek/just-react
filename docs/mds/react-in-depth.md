@@ -118,6 +118,11 @@ function Title(props) {
 
 **Immutability - All React components must act like `pure functions` with respect to their props, whether declared as a class or a function**
 
-<NEXT
+### State and Lifecycle
 
-https://reactjs.org/docs/state-and-lifecycle.html>
+State is similar to props, but it is private and fully controlled by the component. They are MUTABLE.
+
+**quick state vs props comparison**
+
+![alt text](../../docs/imgs/props-vs-state.png "props vs state")
+
