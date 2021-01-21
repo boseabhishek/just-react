@@ -26,6 +26,8 @@ ReactDOM.render(element, document.getElementById('root'));
 ### features:
 1. *React elements are immutable* . Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
 
+2. React needs only *one and only one element* to be returned, so if there are multiple markups, we need to bind them in one enclosing `<div>..</div>` tag
+
 ---
 
 ## Components and Props

@@ -42,7 +42,7 @@ class ShoppingList extends React.Component {
 // Example usage: <ShoppingList name="Mark" />
 
 ```
-> For theory on React anatomy, please follow [here](react-in-depth.md)
+> For theory on React anatomy, please follow [here](docs/mds/react-in-depth.md)
 
 **All JSX code btw** :point_up_2:
 
@@ -94,7 +94,7 @@ const element = React.createElement(
   'Hello, world!'
 ); 
 ```
-React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
+`React.createElement()` performs a few checks to help you write bug-free code but essentially it creates an object like this:
 
 ```js
 // Note: this structure is simplified
