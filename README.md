@@ -1,50 +1,43 @@
 # just-react
 
-## setup
+## Setup
 
 [instructions for following along locally using your preferred text editor
 ](https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment)
 
-## What Is React?
+## What Is React?
 
-React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
+React is a declarative, efficient, and flexible **JavaScript library** for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
-## How it works?
+## If it's a library, how and wher do we use it?
+
+Short answer: Inside JS code by importing.
+
+Long answer:
+
+This below is a JS code (or more specifically ES6 or ES2015 code). For more info on **ES6**, see [here](https://github.com/boseabhishek/just-about-javascript/blob/main/README.md#i-keep-on-hearing-about-es6-whats-the-fuss--all-about)
 
 ```js
-
-// ShoppingList is a React component class, or React component type.
-//
-// We use `components` to tell React what we want to see on the screen.
-// When our data changes, React will efficiently update and re-render our components.
-//
-// `props` are "params" to `components`
-//
-// The `render` method returns a description of what you want to see on the screen
-// That description is called a `React element`
-class ShoppingList extends React.Component {
-  render() {
-    // You can put any JavaScript expressions within braces 
-    // inside JSX
-    return (
-      <div className="shopping-list">
-        <h1>Shopping List for {this.props.name}</h1>
-        <ul>
-          <li>Instagram</li>
-          <li>WhatsApp</li>
-          <li>Oculus</li>
-        </ul>
-      </div>
-    );
-  }
-}
-
-// Example usage: <ShoppingList name="Mark" />
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+ 
+class HelloWorld extends React.Component {
+    render() {
+          return (
+                  <div>
+                    Hello, React!
+                  </div>
+                )
+        }
+};
+ 
+ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
+
+See above, in the ES6 file (saved as index.js), `React` and `ReactDOM` are imported from `react` and `react-dom` libraries respectively. And, then, they are used to render some UI stuff on a targeted html page on a html tag with id = "root".
+
 > For theory on React anatomy, please follow [here](docs/mds/react-in-depth.md)
 
-**All JSX code btw** :point_up_2:
 
 Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement('div'). The example above is equivalent to:
 
