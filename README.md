@@ -115,7 +115,9 @@ document.createElement('div');
 https://stackoverflow.com/questions/42438171/wheres-the-connection-between-index-html-and-index-js-in-a-create-react-app-app
 
 
+## Resources:
 
+1. Great book on React can be found here for free. [Vumbula React](docs/Vumbula_React.pdf)
 
 
 
