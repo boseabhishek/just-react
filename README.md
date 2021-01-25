@@ -39,46 +39,31 @@ ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 
 See above, in the ES6 file (saved as index.js), `React` and `ReactDOM` are imported from `react` and `react-dom` libraries respectively. And, then, they are used to render some UI stuff on a targeted html page on a html tag with id = "root".
 
-What is JSX?
-
- It's HTML, but in our JS... with JS inside the HTML For more, see [here](https://reactjs.org/docs/introducing-jsx.html)
 
 For more on **ES6**, see [here](https://github.com/boseabhishek/just-about-javascript/blob/main/README.md#i-keep-on-hearing-about-es6-whats-the-fuss--all-about)
 
 > For theory on React anatomy, please follow [here](docs/mds/react-in-depth.md)
 
+### What is JSX?
 
-Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement('div'). The example above is equivalent to:
+ It's HTML, but in our JS... with JS inside the HTML For more, see [here](https://reactjs.org/docs/introducing-jsx.html)
+
+Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement('div'). The above JSX part in teh component gets transformed to React `createElement()` using Babel as below:
 
 ```js
 
-return React.createElement('div', {className: 'shopping-list'},
-  React.createElement('h1', /* ... h1 children ... */),
-  React.createElement('ul', /* ... ul children ... */)
-);
+class HelloWorld extends React.Component {
+  render() {
+    // JSX start
+    return /*#__PURE__*/React.createElement("div", null, "Hello, React!");
+  } // JSX end
+};
 
 ```
 
-See [this](https://babeljs.io/repl/#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgBAxgNgQwM5IHIILYFMC8AiJACwHsAHUsAOwHMBaOMJAFzwD4AoKKYQgRlYDKJclWpQAMoyZQAZsQBOUAN6l5ZJADpKmLAF9gAej4cuwAK5wTXbg1YBJSswTV5mQ7c7XgtgOqEETEgAguTuYFamtgDyMBZmSGFWhhYchuAQrADc7EA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=react&prettier=false&targets=&version=7.12.12&externalPlugins=) link to find out how it works.
+### Some more xample on how Babel transforms JSX into JS
 
-:coffee:    **Fact 1# JS and ReactJS**
-
-```js
-React.createElement('div'
-```
-
-is quite similar to what you do in JS DOM manipulation using 
-```js
-document.createElement('div');
-```
-
-## Where's the connection between index.html and index.js in a Create-React-App application?
-
-https://stackoverflow.com/questions/42438171/wheres-the-connection-between-index-html-and-index-js-in-a-create-react-app-app
-
-## What hepens to JSX code inside a React app?
-
-Babel compiles JSX down to React.createElement() calls.
+Babel compiles JSX down to React.`createElement()` calls.
 
 ```js
 const element = (
@@ -110,6 +95,26 @@ const element = {
 ```
 
 These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+
+## Fun Facts
+
+:coffee:    **Fact 1: Old school JS VS ReactJS create element**
+
+```js
+React.createElement('div'
+```
+
+is quite similar to what you do in JS DOM manipulation using 
+```js
+document.createElement('div');
+```
+
+:coffee:    **Fact 2: Where's the connection between index.html and index.js in a Create-React-App application?**
+
+
+https://stackoverflow.com/questions/42438171/wheres-the-connection-between-index-html-and-index-js-in-a-create-react-app-app
+
+
 
 
 
