@@ -9,13 +9,14 @@
 
 React is a declarative, efficient, and flexible **JavaScript library** for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
-## If it's a library, how and wher do we use it?
+## If it's a library, how and where do we use it?
 
-Short answer: Inside JS code by importing.
+Short answer: *Inside .js file we write a mix of JSX and JS(ES6 or even prior) code*, code by importing.
 
 Long answer:
 
-This below is a JS code (or more specifically ES6 or ES2015 code). For more info on **ES6**, see [here](https://github.com/boseabhishek/just-about-javascript/blob/main/README.md#i-keep-on-hearing-about-es6-whats-the-fuss--all-about)
+This below is a JSX code inside the `HelloWorld` component.
+
 
 ```js
 import React from 'react';
@@ -23,18 +24,26 @@ import ReactDOM from 'react-dom';
  
 class HelloWorld extends React.Component {
     render() {
+        // JSX start
           return (
                   <div>
                     Hello, React!
                   </div>
                 )
         }
+        // JSX end
 };
  
 ReactDOM.render(<HelloWorld />, document.getElementById('root'));
 ```
 
 See above, in the ES6 file (saved as index.js), `React` and `ReactDOM` are imported from `react` and `react-dom` libraries respectively. And, then, they are used to render some UI stuff on a targeted html page on a html tag with id = "root".
+
+What is JSX?
+
+ It's HTML, but in our JS... with JS inside the HTML For more, see [here](https://reactjs.org/docs/introducing-jsx.html)
+
+For more on **ES6**, see [here](https://github.com/boseabhishek/just-about-javascript/blob/main/README.md#i-keep-on-hearing-about-es6-whats-the-fuss--all-about)
 
 > For theory on React anatomy, please follow [here](docs/mds/react-in-depth.md)
 
