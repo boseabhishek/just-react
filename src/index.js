@@ -1,11 +1,12 @@
 import ReactDOM from 'react-dom';
 
 // importing `App` component 
-import App from './App';
-import Welcometo from './Welcome';
+
+// N.B. As App has been an export default,
+// you can rename it inside the imported file
+import A from './App';
 
 ReactDOM.render(
-    // element, // can directly use greet(user) here
-    <App />,
+    <A />,
     document.getElementById('root')
 );

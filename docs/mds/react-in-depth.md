@@ -63,7 +63,7 @@ class Welcome extends React.Component {
 }
 ```
 
-*The above two components are equivalent from React’s point of view.*
+*The above two components are equivalent from React’s point of view.* Also, see the comparison [React: Class Component vs Functional Component](https://itnext.io/react-component-class-vs-stateless-component-e3797c7d23ab)
 
 ### Rendering a component:
 

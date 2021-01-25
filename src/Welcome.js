@@ -3,15 +3,12 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
 // importing components from components 
-import Title from './components/Title';
-import Greetings from './components/common';
-
+import {Greetings, Title} from './components/common';
 
 const user = {
     firstName: 'Abhishek',
     lastName: 'Bose'
 };
-
 
 // see Welcometo starts with a capital letter
 // to make it a component to be called from an element
@@ -32,5 +29,8 @@ Welcometo.propTypes = {
     title: PropTypes.string.isRequired, // must be a string and defined
 };
 
-// exporting component `Welcometo` as a public API
+// To export a single component in ES6, 
+// you can use export default as follows
 export default Welcometo
+
+// or, export class Welcometo extends Component above
