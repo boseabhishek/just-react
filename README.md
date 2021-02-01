@@ -9,6 +9,8 @@
 
 React is a declarative, efficient, and flexible **JavaScript library** for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
+**For theory on React anatomy/React in depth, please see [React in Depth](docs/mds/react-in-depth.md)**
+
 ## If it's a library, how and where do we use it?
 
 Short answer: *Inside .js file we write a mix of JSX and JS(ES6 or even prior) code*, code by importing.
@@ -42,7 +44,6 @@ See above, in the ES6 file (saved as index.js), `React` and `ReactDOM` are impor
 
 For more on **ES6**, see [here](https://github.com/boseabhishek/just-about-javascript/blob/main/README.md#i-keep-on-hearing-about-es6-whats-the-fuss--all-about)
 
-** For theory on React anatomy/React in depth, please see [React in Depth](docs/mds/react-in-depth.md)**
 
 ### What is JSX?
 
