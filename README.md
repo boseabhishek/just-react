@@ -5,6 +5,12 @@
 [instructions for following along locally using your preferred text editor
 ](https://reactjs.org/tutorial/tutorial.html#setup-option-2-local-development-environment)
 
+## Build and run
+
+> npm install
+
+> npm start
+
 ## What Is React?
 
 React is a declarative, efficient, and flexible **JavaScript library** for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
