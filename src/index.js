@@ -6,4 +6,4 @@ import ReactDOM from 'react-dom';
 // you can rename it inside the imported file
 import A from './App';
 
-ReactDOM.render(<A />, document.getElementById('root'))
+ReactDOM.render(<A />, document.querySelector('#root'))
