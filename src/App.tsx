@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // importing `App` component 
 import Welcometo from './Welcome';
 
+
+/* 
 class App extends Component {
     render() {
         return (
@@ -14,7 +16,7 @@ class App extends Component {
             </div >
         );
     }
-}
+} */
 
 // exporting component `App` as a public API
 export default App
